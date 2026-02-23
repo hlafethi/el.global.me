@@ -4,7 +4,7 @@
 export const siteConfig = {
   name: 'E & L PROPRETE',
   description: 'Entreprise de nettoyage professionnelle à Saint-Priest (69800). Services de propreté pour professionnels et particuliers dans le Rhône.',
-  url: 'https://www.el-proprete.fr', // TODO: Remplacer par l'URL réelle
+  url: 'https://elp.webglobal.me', // URL de déploiement (test / prod)
   
   contact: {
     // TODO: Remplacer par le vrai numéro de téléphone

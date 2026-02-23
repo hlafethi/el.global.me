@@ -1,7 +1,7 @@
 # Déploiement : GitHub + Portainer (méthode simple)
 
 **Dépôt GitHub :** https://github.com/hlafethi/el.global.me.git  
-**Sous-domaine :** el.webglobal.me
+**Sous-domaine :** elp.webglobal.me
 
 ---
 
@@ -72,16 +72,16 @@ https://github.com/hlafethi/el.global.me
 Portainer va :
 - cloner le dépôt ;
 - construire l’image avec le `Dockerfile` ;
-- lancer le conteneur (port **3000** sur l’hôte → 80 dans le conteneur).
+- lancer le conteneur (port **3080** sur l’hôte → 80 dans le conteneur).
 
 ### 2.3 Vérifier que le site répond
 
-- Dans le navigateur : `http://VOTRE_IP_VPS:3000`  
+- Dans le navigateur : `http://VOTRE_IP_VPS:3080`  
 Vous devez voir le site E & L PROPRETE.
 
 ---
 
-## Partie 3 : Nginx Proxy Manager (HTTPS pour el.webglobal.me)
+## Partie 3 : Nginx Proxy Manager (HTTPS pour elp.webglobal.me)
 
 ### 3.1 DNS
 
@@ -96,14 +96,14 @@ Chez l’hébergeur du domaine **webglobal.me** :
 2. **Hosts** → **Proxy Hosts** → **Add Proxy Host**.
 
 3. **Details** :
-   - **Domain Names** : `el.webglobal.me`
+   - **Domain Names** : `elp.webglobal.me`
    - **Scheme** : `http`
    - **Forward Hostname / IP** : `172.17.0.1` ou **IP publique du VPS** (si NPM tourne dans Docker).
-   - **Forward Port** : `3000`
+   - **Forward Port** : `3080`
 
 4. **SSL** : cocher **SSL** → **Request a new SSL Certificate** → **Force SSL** si proposé → **Save**.
 
-5. Tester : **https://el.webglobal.me**
+5. Tester : **https://elp.webglobal.me**
 
 ---
 
@@ -124,7 +124,7 @@ git push origin main
 1. **Stacks** → ouvrir la stack **el-proprete**.
 2. Cliquer sur **Pull and redeploy** (ou **Update the stack** si l’option est proposée).
 
-Portainer re-clone le dépôt, rebuild l’image et redémarre le conteneur. Le site **el.webglobal.me** affiche alors la nouvelle version.
+Portainer re-clone le dépôt, rebuild l’image et redémarre le conteneur. Le site **elp.webglobal.me** affiche alors la nouvelle version.
 
 ---
 
@@ -134,7 +134,7 @@ Portainer re-clone le dépôt, rebuild l’image et redémarre le conteneur. Le 
 |-------|-----|--------|
 | 1 | PC | `git init` → `git add .` → `git commit` → `git remote add origin` → `git push -u origin main` |
 | 2 | Portainer | Stacks → Add stack → Git → URL repo → Compose path `docker-compose.yml` → Deploy |
-| 3 | DNS | Enregistrement A : `el` → IP du VPS |
-| 4 | NPM | Proxy Host : `el.webglobal.me` → `172.17.0.1:3000` (ou IP VPS:3000) + SSL |
+| 3 | DNS | Enregistrement A : `elp` → IP du VPS |
+| 4 | NPM | Proxy Host : `elp.webglobal.me` → `172.17.0.1:3080` (ou IP VPS:3080) + SSL. **Guide détaillé :** `CONFIG_NPM_COMPLETE.md` |
 
-Résultat : site en **https://el.webglobal.me** déployé depuis GitHub via Portainer.
+Résultat : site en **https://elp.webglobal.me** déployé depuis GitHub via Portainer.
