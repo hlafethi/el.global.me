@@ -5,4 +5,4 @@ services:
     container_name: el-proprete
     restart: unless-stopped
     ports:
-      - "3000:80"
+      - "3080:80"
