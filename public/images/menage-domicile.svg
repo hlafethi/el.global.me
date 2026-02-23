@@ -1,0 +1,14 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#fef5e7"/>
+  <path d="M 100 300 Q 250 100 400 300 T 700 300" stroke="#f39c12" stroke-width="5" fill="none"/>
+  <circle cx="400" cy="300" r="120" fill="#f39c12" opacity="0.2"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#d68910" text-anchor="middle">
+    MÉNAGE À DOMICILE
+  </text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="20" fill="#b9770e" text-anchor="middle">
+    Service personnalisé
+  </text>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="16" fill="#666" text-anchor="middle">
+    Remplacez par une photo d'un intérieur propre
+  </text>
+</svg>

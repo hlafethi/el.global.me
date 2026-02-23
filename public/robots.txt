@@ -1,0 +1,5 @@
+# robots.txt pour E & L PROPRETE
+User-agent: *
+Allow: /
+
+Sitemap: https://www.el-proprete.fr/sitemap.xml

@@ -1,0 +1,15 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#d1fae5"/>
+  <rect x="100" y="150" width="200" height="300" fill="#10b981" opacity="0.3" rx="10"/>
+  <rect x="350" y="100" width="200" height="400" fill="#059669" opacity="0.3" rx="10"/>
+  <rect x="600" y="200" width="150" height="250" fill="#047857" opacity="0.3" rx="10"/>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#065f46" text-anchor="middle">
+    RÉGION LYONNAISE
+  </text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="20" fill="#047857" text-anchor="middle">
+    Saint-Priest et Lyon Est
+  </text>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="16" fill="#666" text-anchor="middle">
+    Remplacez par une photo de la région
+  </text>
+</svg>

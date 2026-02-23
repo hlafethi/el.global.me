@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    image: el-proprete:latest
+    container_name: el-proprete
+    restart: unless-stopped
+    ports:
+      - "3000:80"
