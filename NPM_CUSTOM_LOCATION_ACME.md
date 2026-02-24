@@ -15,10 +15,12 @@ Dans la nouvelle version de Nginx Proxy Manager, la config ACME se fait via **Cu
 
 | Champ | Valeur |
 |--------|--------|
-| **Location** | `/.well-known/acme-challenge/` |
+| **Location** | `/.well-known/acme-challenge/` (obligatoire : **le point** après le premier `/` — pas `/well-known/` sans point) |
 | **Scheme** | `http` |
 | **Forward Hostname / IP** | `127.0.0.1` |
 | **Forward Port** | `80` |
+
+**Important :** le **bloc Nginx** ci-dessous (avec `root /data/letsencrypt-acme-challenge`) est indispensable. Sans lui, NPM forward la requête au site et vous gardez une 404. Ce dossier est celui où Certbot écrit les fichiers de défi.
 
 ### Bloc Nginx (Configuration avancée / Nginx Configuration Block)
 
@@ -47,7 +49,8 @@ root /data/letsencrypt-acme-challenge;
 ## Si « Internal Error » apparaît
 
 - Vérifier qu’il n’y a pas d’espace en trop dans **Location** (ex. `/.well-known/acme-challenge/` sans espace avant/après).
-- Essayer **Option B** pour le bloc Nginx si **Option A** provoque une erreur.
+- **Location** : doit être `/.well-known/acme-challenge/` **avec le point** (pas `/well-known/` sans point).
+- Essayer **Option B** pour le bloc Nginx (directives seules, sans `location ^~ ...`) si **Option A** provoque une erreur.
 - Si la nouvelle version a un onglet **Advanced** au niveau du Proxy Host (à côté de Details / SSL), coller **uniquement** le bloc **Option A** dans cet onglet Advanced et ne pas créer de Custom Location pour ACME.
 
 ---

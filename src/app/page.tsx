@@ -337,7 +337,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="relative h-96 rounded-xl overflow-hidden shadow-2xl">
               <Image
-                src="/region-lyonnaise.jpg"
+                src="/images/region-lyonnaise.svg"
                 alt="Région lyonnaise - Zone d'intervention E & L PROPRETE"
                 fill
                 className="object-cover"
@@ -477,7 +477,7 @@ export default function HomePage() {
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-xl order-1 lg:order-2">
                 <Image
-                  src="/bureau-propre.png"
+                  src="/images/bureau-propre.svg"
                   alt="Nettoyage de bureaux Lyon Est"
                   fill
                   className="object-cover"
@@ -489,7 +489,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div className="relative h-80 rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/satisfaction-client.png"
+                  src="/images/satisfaction-client.svg"
                   alt="Nettoyage de copropriétés région lyonnaise"
                   fill
                   className="object-cover"
@@ -542,7 +542,7 @@ export default function HomePage() {
               </div>
               <div className="relative h-80 rounded-xl overflow-hidden shadow-xl order-1 lg:order-2">
                 <Image
-                  src="/menage-domicile.png"
+                  src="/images/menage-domicile.svg"
                   alt="Ménage à domicile Saint-Priest"
                   fill
                   className="object-cover"
@@ -577,7 +577,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative h-96 rounded-xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/equipe-nettoyage.png"
+                  src="/images/equipe-nettoyage.svg"
                   alt="Équipe E & L PROPRETE Saint-Priest"
                   fill
                   className="object-cover"

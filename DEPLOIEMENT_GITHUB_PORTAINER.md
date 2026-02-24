@@ -67,7 +67,8 @@ https://github.com/hlafethi/el.global.me
 
 7. Optionnel : cocher **Pull and redeploy** si vous voulez pouvoir redéployer depuis l’interface plus tard.
 
-8. Cliquer sur **Deploy the stack**.
+8. Cliquer sur **Deploy the stack**.  
+   Si vous voyez **« pull access denied for el-proprete »** : la stack a été créée sans Git (ex. Web editor). Il faut la supprimer et la recréer avec **Build method: Git repository**. Voir **PORTAINER_PULL_ACCESS_DENIED.md**.
 
 Portainer va :
 - cloner le dépôt ;
@@ -87,7 +88,7 @@ Vous devez voir le site E & L PROPRETE.
 
 Chez l’hébergeur du domaine **webglobal.me** :
 
-- Enregistrement **A** : nom `el` → **IP du VPS** (TTL 300 ou 3600).
+- Enregistrement **A** : nom `elp` → **IP du VPS** (TTL 300 ou 3600).
 
 ### 3.2 Nginx Proxy Manager
 

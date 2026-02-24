@@ -12,14 +12,20 @@ Let's Encrypt appelle **http://elp.webglobal.me/.well-known/acme-challenge/TOKEN
 
 ## Solution
 
-Faire répondre **NPM** pour le chemin `/.well-known/acme-challenge/` au lieu de le transmettre au site.
+NPM doit **servir les fichiers** depuis `/data/letsencrypt-acme-challenge` (où Certbot écrit le défi), **sans** proxy vers le site ni vers 127.0.0.1. Une **Custom Location** avec Forward 127.0.0.1:80 fait un **proxy** : Let's Encrypt reçoit alors la réponse du service cible (souvent 404). Il faut un bloc **Advanced** avec `root` pour servir depuis le disque.
+
+### Ordre à respecter
+
+1. **Supprimer** la Custom Location `/.well-known/acme-challenge/` si elle existe (éviter le proxy).
+2. Ajouter la config **Advanced** ci-dessous, puis **Save**.
+3. **Après** avoir sauvegardé, redemander le certificat (onglet SSL).
 
 ### Étapes dans NPM
 
 1. Ouvrez **Nginx Proxy Manager** (http://VOTRE_IP:81).
 2. **Hosts** → **Proxy Hosts** → cliquez sur **elp.webglobal.me** (ou l’icône crayon pour éditer).
 3. Passez à l’onglet **Advanced**.
-4. Dans la zone **Custom Nginx Configuration**, collez :
+5. Dans la zone **Custom Nginx Configuration**, collez :
 
 ```nginx
 location ^~ /.well-known/acme-challenge/ {
@@ -28,7 +34,7 @@ location ^~ /.well-known/acme-challenge/ {
 }
 ```
 
-5. Cliquez sur **Save**.
+5. Cliquez sur **Save** (en bas). Vérifiez qu’il n’y a pas d’erreur (sinon le bloc est refusé).
 
 ### Redemander le certificat SSL
 
