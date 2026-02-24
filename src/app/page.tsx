@@ -487,12 +487,13 @@ export default function HomePage() {
 
             {/* Copropriétés */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="relative h-80 rounded-xl overflow-hidden shadow-xl">
+              <div className="relative h-80 rounded-xl overflow-hidden shadow-xl flex items-center justify-center bg-primary-50 p-8">
                 <Image
-                  src="/images/satisfaction-client.svg"
-                  alt="Nettoyage de copropriétés région lyonnaise"
-                  fill
-                  className="object-cover"
+                  src="/logo.png"
+                  alt="Nettoyage de copropriétés région lyonnaise - E & L PROPRETE"
+                  width={280}
+                  height={120}
+                  className="object-contain"
                 />
               </div>
               <div>
