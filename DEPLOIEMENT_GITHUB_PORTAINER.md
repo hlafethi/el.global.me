@@ -125,7 +125,7 @@ git push origin main
 1. **Stacks** → ouvrir la stack **el-proprete**.
 2. Cliquer sur **Pull and redeploy** (ou **Update the stack** si l’option est proposée).
 
-Portainer re-clone le dépôt, rebuild l’image et redémarre le conteneur. Le site **elp.webglobal.me** affiche alors la nouvelle version.
+Portainer re-clone le dépôt, rebuild l’image et redémarre le conteneur. Le site **elp.webglobal.me** affiche alors la nouvelle version. Le `docker-compose.yml` attache le conteneur au réseau **proxy-network** pour éviter un 502 après redéploiement. Si 502 : sur le VPS, exécuter `docker network connect proxy-network el-proprete`.
 
 ---
 
@@ -136,6 +136,7 @@ Portainer re-clone le dépôt, rebuild l’image et redémarre le conteneur. Le 
 | 1 | PC | `git init` → `git add .` → `git commit` → `git remote add origin` → `git push -u origin main` |
 | 2 | Portainer | Stacks → Add stack → Git → URL repo → Compose path `docker-compose.yml` → Deploy |
 | 3 | DNS | Enregistrement A : `elp` → IP du VPS |
-| 4 | NPM | Proxy Host : `elp.webglobal.me` → `172.17.0.1:3080` (ou IP VPS:3080) + SSL. **Guide détaillé :** `CONFIG_NPM_COMPLETE.md` |
+| 4 | NPM | Proxy Host : `elp.webglobal.me` → `el-proprete:80` (conteneur sur **proxy-network**). **Guide détaillé :** `CONFIG_NPM_COMPLETE.md` |
+| 5 | Après redéploiement | Si 502 : `docker network connect proxy-network el-proprete` (ou le compose attache déjà le conteneur au réseau). |
 
 Résultat : site en **https://elp.webglobal.me** déployé depuis GitHub via Portainer.

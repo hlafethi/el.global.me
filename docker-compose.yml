@@ -6,3 +6,10 @@ services:
     restart: unless-stopped
     ports:
       - "3080:80"
+    networks:
+      - default
+      - proxy-network
+
+networks:
+  proxy-network:
+    external: true
