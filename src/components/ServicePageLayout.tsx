@@ -21,10 +21,24 @@ export default function ServicePageLayout({
 
   return (
     <>
-      <section
-        className={`relative bg-gradient-to-br ${service.heroGradient} text-white py-20 lg:py-28 overflow-hidden`}
-      >
-        <div className="container-custom relative">
+      <section className="relative text-white py-20 lg:py-28 overflow-hidden min-h-[28rem] flex items-center">
+        <div className="absolute inset-0">
+          <Image
+            src={service.heroImage}
+            alt=""
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+            unoptimized
+          />
+        </div>
+        <div className="absolute inset-0 bg-black/50" aria-hidden />
+        <div
+          className={`absolute inset-0 bg-gradient-to-br ${service.heroGradient} opacity-70`}
+          aria-hidden
+        />
+        <div className="container-custom relative z-10">
           <div className="max-w-3xl">
             <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 text-white/90 text-sm font-medium mb-6">
               Nos services
@@ -46,7 +60,7 @@ export default function ServicePageLayout({
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent z-10" />
       </section>
 
       <section className="py-16 bg-white">
