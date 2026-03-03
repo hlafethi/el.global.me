@@ -16,11 +16,11 @@ import {
 } from 'react-icons/fa'
 
 export const metadata: Metadata = {
-  title: 'Nettoyage professionnel pour entreprises à Saint-Priest | E & L PROPRETE',
+  title: 'Nettoyage professionnel pour entreprises à Lyon et son agglomération | E & L PROPRETE',
   description:
-    'Services de nettoyage pour professionnels à Saint-Priest : bureaux, commerces, copropriétés, locaux industriels. Contrats réguliers et interventions ponctuelles. Devis gratuit.',
+    'Services de nettoyage pour professionnels à Lyon et son agglomération : bureaux, commerces, copropriétés, locaux industriels. Contrats réguliers et interventions ponctuelles. Devis gratuit.',
   openGraph: {
-    title: 'Nettoyage professionnel entreprises - E & L PROPRETE Saint-Priest',
+    title: 'Nettoyage professionnel entreprises - E & L PROPRETE Lyon',
     description:
       'Entretien de bureaux, commerces, copropriétés dans le Rhône. Qualité et ponctualité garanties.',
   },
@@ -34,8 +34,7 @@ export default function ProfessionalsPage() {
         <div className="container-custom">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Entreprise de nettoyage pour professionnels à Saint-Priest et Lyon
-              Est
+              Entreprise de nettoyage pour professionnels à Lyon et son agglomération
             </h1>
             <p className="text-xl mb-8 text-primary-50 leading-relaxed">
               E & L PROPRETE accompagne les entreprises, syndics, commerces et
@@ -63,12 +62,12 @@ export default function ProfessionalsPage() {
               Votre partenaire nettoyage professionnel dans le Rhône
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Située à Saint-Priest, <strong>E & L PROPRETE</strong> est
-              spécialisée dans le <strong>nettoyage professionnel</strong> pour
-              les entreprises, syndics de copropriétés, commerces et
-              établissements de santé. Nous intervenons dans tout le secteur du
-              Lyon Est (Saint-Priest, Bron, Vénissieux, Mions, Chassieu, Meyzieu,
-              Lyon 7ème et 8ème).
+              <strong>E & L PROPRETE</strong> est spécialisée dans le{' '}
+              <strong>nettoyage professionnel</strong> pour les entreprises,
+              syndics de copropriétés, commerces et établissements de santé. Nous
+              intervenons sur <strong>Lyon et son agglomération</strong> : métropole
+              de Lyon, Saint-Priest, Bron, Vénissieux, Mions, Chassieu, Meyzieu,
+              Lyon et ses arrondissements.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
               Que vous ayez besoin d'un <strong>entretien régulier</strong> de vos
@@ -96,7 +95,7 @@ export default function ProfessionalsPage() {
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Des solutions complètes et personnalisées pour tous types de locaux
-              professionnels à Saint-Priest et dans le Rhône.
+              professionnels à Lyon et son agglomération.
             </p>
           </div>
 
@@ -116,7 +115,7 @@ export default function ProfessionalsPage() {
             <ServiceCard
               icon={<FaBuilding />}
               title="Entretien de copropriétés et immeubles"
-              description="Nettoyage des parties communes pour les syndics et gestionnaires immobiliers : halls d'entrée, escaliers, paliers, ascenseurs, locaux poubelles. Fréquence adaptable (quotidienne, bi-hebdomadaire, hebdomadaire). Présence sur Saint-Priest, Mions, Bron."
+              description="Nettoyage des parties communes pour les syndics et gestionnaires immobiliers : halls d'entrée, escaliers, paliers, ascenseurs, locaux poubelles. Fréquence adaptable (quotidienne, bi-hebdomadaire, hebdomadaire). Présence sur Lyon et son agglomération."
             />
 
             <ServiceCard
@@ -175,8 +174,8 @@ export default function ProfessionalsPage() {
                     Visite de vos locaux (gratuite et sans engagement)
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Nous nous déplaçons sur site à Saint-Priest ou dans le Lyon
-                    Est pour effectuer un état des lieux précis. Cette visite nous
+                    Nous nous déplaçons sur site à Lyon ou dans l'agglomération
+                    pour effectuer un état des lieux précis. Cette visite nous
                     permet d'évaluer la nature des prestations, les contraintes
                     d'accès, le matériel nécessaire et d'échanger directement avec
                     vous.
@@ -323,7 +322,7 @@ export default function ProfessionalsPage() {
               </h2>
               <p className="text-lg text-gray-600">
                 Vous êtes une entreprise, un syndic, un commerce ou un
-                professionnel de santé à Saint-Priest ou dans le Lyon Est ?
+                professionnel de santé à Lyon ou dans son agglomération ?
                 Contactez-nous dès maintenant pour un devis sur-mesure.
               </p>
             </div>
@@ -365,7 +364,7 @@ export default function ProfessionalsPage() {
                   <p className="text-gray-700">
                     Besoin d'un nettoyage en urgence (après sinistre, avant
                     événement, livraison de chantier) ? Nous intervenons sous 24 à
-                    48h à Saint-Priest et Lyon Est.
+                    48h à Lyon et son agglomération.
                   </p>
                 </div>
               </div>

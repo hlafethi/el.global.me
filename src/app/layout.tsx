@@ -10,16 +10,16 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} - Entreprise de nettoyage à Saint-Priest (69)`,
+    default: `${siteConfig.name} - Entreprise de nettoyage à Lyon et son agglomération (69)`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
   keywords: [
-    'entreprise de nettoyage Saint-Priest',
-    'société de propreté Saint-Priest',
-    'nettoyage bureaux Lyon Est',
-    'ménage à domicile Saint-Priest',
-    'nettoyage copropriétés Saint-Priest',
+    'entreprise de nettoyage Lyon',
+    'société de propreté métropole Lyon',
+    'nettoyage bureaux Lyon agglomération',
+    'ménage à domicile Lyon',
+    'nettoyage copropriétés Lyon',
     'entreprise de nettoyage Rhône 69',
     'nettoyage professionnel 69800',
     'service de propreté Lyon',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     locale: 'fr_FR',
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: `${siteConfig.name} - Entreprise de nettoyage à Saint-Priest`,
+    title: `${siteConfig.name} - Entreprise de nettoyage à Lyon et son agglomération`,
     description: siteConfig.description,
   },
   robots: {

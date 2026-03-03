@@ -16,11 +16,11 @@ import {
 } from 'react-icons/fa'
 
 export const metadata: Metadata = {
-  title: 'Ménage à domicile à Saint-Priest (69) | E & L PROPRETE',
+  title: 'Ménage à domicile à Lyon et son agglomération (69) | E & L PROPRETE',
   description:
-    'Service de ménage à domicile à Saint-Priest et Lyon Est. Personnel qualifié et discret. Paiement CESU accepté avec avantages fiscaux. Devis gratuit.',
+    'Service de ménage à domicile à Lyon et son agglomération. Personnel qualifié et discret. Paiement CESU accepté avec avantages fiscaux. Devis gratuit.',
   openGraph: {
-    title: 'Ménage à domicile Saint-Priest - E & L PROPRETE',
+    title: 'Ménage à domicile Lyon et agglomération - E & L PROPRETE',
     description:
       'Service de ménage régulier ou ponctuel pour particuliers. Paiement CESU accepté.',
   },
@@ -34,7 +34,7 @@ export default function ParticuliersPage() {
         <div className="container-custom">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-              Ménage à domicile à Saint-Priest et Lyon Est
+              Ménage à domicile à Lyon et son agglomération
             </h1>
             <p className="text-xl mb-8 text-success-50 leading-relaxed">
               E & L PROPRETE vous propose des prestations de ménage à domicile
@@ -63,8 +63,8 @@ export default function ParticuliersPage() {
               Un service de ménage à domicile de confiance
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Basée à Saint-Priest dans le Rhône, <strong>E & L PROPRETE</strong>{' '}
-              accompagne les particuliers dans l'entretien de leur domicile. Que
+              <strong>E & L PROPRETE</strong> accompagne les particuliers dans
+              l'entretien de leur domicile sur Lyon et son agglomération. Que
               vous ayez besoin d'un{' '}
               <strong>ménage régulier hebdomadaire</strong>, d'un{' '}
               <strong>grand nettoyage de printemps</strong> ou d'un{' '}
@@ -72,9 +72,9 @@ export default function ParticuliersPage() {
               s'adapte à vos besoins et à votre rythme de vie.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Nous intervenons sur <strong>Saint-Priest</strong> et dans tout le{' '}
-              <strong>Lyon Est</strong> : Mions, Bron, Vénissieux, Chassieu,
-              Meyzieu, Décines-Charpieu, Genas, Lyon 7ème et 8ème. Notre personnel
+              Nous intervenons sur <strong>Lyon et son agglomération</strong> :
+              Lyon et ses arrondissements, Saint-Priest, Mions, Bron, Vénissieux,
+              Chassieu, Meyzieu, Décines-Charpieu, Genas et la métropole de Lyon. Notre personnel
               est formé, expérimenté et respectueux de votre intimité. Vous pouvez
               nous faire confiance pour l'entretien de votre maison ou appartement.
             </p>
@@ -104,7 +104,7 @@ export default function ParticuliersPage() {
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Des solutions flexibles et personnalisées pour l'entretien de votre
-              intérieur à Saint-Priest et dans le Rhône.
+              intérieur à Lyon et dans son agglomération.
             </p>
           </div>
 
@@ -277,8 +277,8 @@ export default function ParticuliersPage() {
                     Visite et devis gratuit
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Nous pouvons nous déplacer à votre domicile à Saint-Priest ou
-                    dans le Lyon Est pour une visite gratuite et sans engagement.
+                    Nous pouvons nous déplacer à votre domicile à Lyon ou dans l'agglomération
+                    pour une visite gratuite et sans engagement.
                     Cela nous permet d'évaluer précisément vos besoins et de vous
                     proposer un devis personnalisé.
                   </p>
@@ -426,7 +426,7 @@ export default function ParticuliersPage() {
                 Demandez votre devis gratuit pour le ménage à domicile
               </h2>
               <p className="text-lg text-gray-600">
-                Vous habitez Saint-Priest, Mions, Bron, Vénissieux ou le Lyon Est
+                Vous habitez Lyon ou son agglomération (Saint-Priest, Mions, Bron, Vénissieux…)
                 ? Contactez-nous pour un devis personnalisé et sans engagement.
               </p>
             </div>

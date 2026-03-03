@@ -6,6 +6,7 @@ import ContactForm from '@/components/ContactForm'
 import ServiceCard from '@/components/ServiceCard'
 import TestimonialCard from '@/components/TestimonialCard'
 import { siteConfig } from '@/config/siteConfig'
+import { servicesMenu } from '@/config/servicesMenu'
 import {
   FaBuilding,
   FaHome,
@@ -17,16 +18,21 @@ import {
   FaUserTie,
   FaShieldAlt,
   FaMapMarkedAlt,
+  FaPercent,
+  FaFileAlt,
+  FaHandshake,
+  FaUserCheck,
+  FaStar,
 } from 'react-icons/fa'
 
 export const metadata: Metadata = {
-  title: 'Entreprise de nettoyage à Saint-Priest (69) - Professionnels & Particuliers',
+  title: 'Entreprise de nettoyage à Lyon et son agglomération (69) - Professionnels & Particuliers',
   description:
-    'E & L PROPRETE : entreprise de nettoyage professionnelle à Saint-Priest. Nettoyage de bureaux, copropriétés, ménage à domicile. Devis gratuit. Zone Lyon Est et Rhône.',
+    'E & L PROPRETE : entreprise de nettoyage à Lyon et son agglomération. Nettoyage de bureaux, copropriétés, ménage à domicile. Devis gratuit. Métropole de Lyon et Rhône.',
   openGraph: {
-    title: 'E & L PROPRETE - Entreprise de nettoyage Saint-Priest',
+    title: 'E & L PROPRETE - Entreprise de nettoyage Lyon et agglomération',
     description:
-      'Services de nettoyage professionnel pour bureaux, immeubles, particuliers à Saint-Priest et Lyon Est.',
+      'Services de nettoyage professionnel pour bureaux, immeubles, particuliers à Lyon et son agglomération.',
   },
 }
 
@@ -34,22 +40,25 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20 lg:py-32">
-        <div className="container-custom">
+      <section className="relative bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-20 lg:py-32 overflow-hidden">
+        <div className="container-custom relative">
           <div className="max-w-4xl">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-white/20 text-primary-100 text-sm font-medium mb-6">
+              Lyon et agglomération
+            </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Entreprise de nettoyage à Saint-Priest pour professionnels et
+              Entreprise de nettoyage à Lyon et son agglomération pour professionnels et
               particuliers
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-50 leading-relaxed">
               E & L PROPRETE vous accompagne dans l'entretien et le nettoyage de
-              vos locaux professionnels et de votre domicile à Saint-Priest et
-              dans tout le Lyon Est. Qualité, réactivité et propreté
+              vos locaux professionnels et de votre domicile à Lyon et dans toute
+              la métropole lyonnaise. Qualité, réactivité et propreté
               irréprochable garanties.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="#contact"
+                href="/contact"
                 className="btn-primary text-center inline-block"
               >
                 Devis gratuit
@@ -64,27 +73,61 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
       </section>
 
+      {/* Crédit d'impôt 50 % - Particuliers (inspiré Servizen) */}
+      <section className="py-16 bg-gradient-to-b from-primary-50/40 to-white border-b border-primary-100">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-block px-3 py-1 rounded-full bg-accent-100 text-accent-800 text-sm font-semibold mb-4">
+              50 % de crédit d'impôt
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Ne payez plus que 50 % de votre facture ménage à domicile
+            </h2>
+            <p className="text-xl text-gray-700 mb-8">
+              E & L PROPRETE vous propose le paiement par <strong>chèques CESU</strong> pour vos prestations de ménage à domicile. Bénéficiez immédiatement de votre <strong>crédit d'impôt de 50 %</strong> sur vos factures de services à la personne.
+            </p>
+            <div className="bg-gradient-to-br from-primary-50 to-success-50 rounded-2xl p-8 mb-8 border-2 border-primary-200 shadow-lg shadow-primary-200/20">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <FaPercent className="text-4xl text-primary-600" />
+                <span className="text-4xl font-bold text-primary-700">50 %</span>
+              </div>
+              <p className="text-gray-800 font-semibold mb-2">Comment ça fonctionne ?</p>
+              <p className="text-gray-700 mb-4">
+                Pour une prestation de <strong>200 €</strong> réalisée par E & L PROPRETE, vous ne payez que <strong>100 €</strong> après déduction du crédit d'impôt. Nous nous occupons des démarches et du suivi pour vous.
+              </p>
+              <Link
+                href="/cheques-cesu"
+                className="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                En savoir plus sur les chèques CESU
+              </Link>
+            </div>
+            <p className="text-gray-600 text-sm">
+              Gain de temps, économies immédiates et simplicité : une gestion 100 % prise en charge pour vos prestations à domicile dans le Rhône.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* À propos */}
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              E & L PROPRETE, votre partenaire propreté à Saint-Priest
+              <span className="text-primary-600">E & L PROPRETE</span>, votre partenaire propreté à Lyon et son agglomération
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-4">
-              Implantée au 13 chemin du Charbonnier à Saint-Priest (69800),{' '}
-              <strong>E & L PROPRETE</strong> est une entreprise de nettoyage
-              spécialisée dans l'entretien courant des bâtiments (code NAF
-              8121Z). Nous intervenons auprès des professionnels et des
-              particuliers pour tous types de prestations : nettoyage de
-              bureaux, entretien de copropriétés, ménage à domicile, remise en
-              état après travaux et débarras.
+              Basée à Saint-Priest, <strong>E & L PROPRETE</strong> intervient sur{' '}
+              <strong>Lyon et son agglomération</strong>. Nous sommes une
+              entreprise de nettoyage spécialisée dans l'entretien courant des
+              bâtiments (code NAF 8121Z), auprès des professionnels et des
+              particuliers : nettoyage de bureaux, entretien de copropriétés,
+              ménage à domicile, remise en état après travaux et débarras.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Notre zone d'intervention couvre Saint-Priest et l'ensemble du
-              secteur Lyon Est, incluant Mions, Bron, Vénissieux, Chassieu,
-              Meyzieu, Décines-Charpieu, Genas, ainsi que Lyon 8ème et 7ème
-              arrondissements. Nous nous engageons à offrir un service de
+              Notre zone d'intervention couvre la métropole de Lyon et ses
+              environs : Lyon et ses arrondissements, Saint-Priest, Mions, Bron,
+              Vénissieux, Chassieu, Meyzieu, Décines-Charpieu, Genas et le Rhône. Nous nous engageons à offrir un service de
               qualité, ponctuel et personnalisé, adapté aux besoins spécifiques
               de chaque client.
             </p>
@@ -142,18 +185,78 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Le fonctionnement E & L PROPRETE (inspiré Servizen) */}
+      <section className="py-16 bg-primary-50">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            Le fonctionnement E & L PROPRETE
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+                <FaFileAlt className="text-2xl" />
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Demande de devis</h3>
+              <p className="text-gray-700 text-sm">Contactez-nous pour un devis gratuit et sans engagement. Par téléphone, formulaire ou WhatsApp.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+                <FaHandshake className="text-2xl" />
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Étude de vos besoins</h3>
+              <p className="text-gray-700 text-sm">Nous définissons ensemble la fréquence, les prestations et les horaires adaptés à votre situation.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+                <FaBroom className="text-2xl" />
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Intervention</h3>
+              <p className="text-gray-700 text-sm">Nos équipes interviennent à domicile ou dans vos locaux avec le matériel et les produits adaptés.</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white">
+                <FaStar className="text-2xl" />
+              </div>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Suivi qualité</h3>
+              <p className="text-gray-700 text-sm">Nous restons à votre écoute et assurons un suivi régulier pour garantir votre satisfaction.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Nos services principaux */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Nos services de nettoyage à Saint-Priest
+              Nos services de nettoyage à Lyon et son agglomération
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               E & L PROPRETE propose une gamme complète de prestations de
               nettoyage et d'entretien, adaptées aux besoins des professionnels
               et des particuliers dans le Rhône.
             </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
+            {servicesMenu.map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className={`group relative rounded-xl bg-gradient-to-br ${service.heroGradient} p-5 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 text-white overflow-hidden flex flex-col items-center justify-center min-h-[7rem]`}
+              >
+                <span className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors duration-300" />
+                <span className="relative block text-center">
+                  <span className="font-bold text-sm leading-tight block mb-2">
+                    {service.name}
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-white/95 group-hover:underline">
+                    Voir plus
+                    <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+                  </span>
+                </span>
+              </Link>
+            ))}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -166,7 +269,7 @@ export default function HomePage() {
             <ServiceCard
               icon={<FaHome />}
               title="Nettoyage d'immeubles et copropriétés"
-              description="Entretien régulier des parties communes : halls d'entrée, cages d'escalier, paliers, ascenseurs. Nous travaillons avec les syndics et gardiens pour assurer la propreté de vos résidences à Saint-Priest et alentours."
+              description="Entretien régulier des parties communes : halls d'entrée, cages d'escalier, paliers, ascenseurs. Nous travaillons avec les syndics et gardiens pour assurer la propreté de vos résidences à Lyon et dans l'agglomération."
             />
 
             <ServiceCard
@@ -184,7 +287,7 @@ export default function HomePage() {
             <ServiceCard
               icon={<FaTruck />}
               title="Débarras et remise en état"
-              description="Service de débarras professionnel pour caves, greniers, garages, locaux commerciaux. Évacuation des encombrants, tri sélectif, nettoyage final. Intervention sur Saint-Priest et Lyon Est."
+              description="Service de débarras professionnel pour caves, greniers, garages, locaux commerciaux. Évacuation des encombrants, tri sélectif, nettoyage final. Intervention sur Lyon et son agglomération."
             />
 
             <ServiceCard
@@ -192,6 +295,57 @@ export default function HomePage() {
               title="Nettoyage de commerces et locaux spécifiques"
               description="Entretien de boutiques, restaurants, cabinets médicaux, salles de sport. Respect des normes d'hygiène strictes. Adaptation aux contraintes spécifiques de chaque secteur d'activité."
             />
+          </div>
+
+          {/* Grille services rapides (inspiré Servizen) */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Nos services en détail
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <Link
+                href="/professionnels"
+                className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 hover:border-primary-400 hover:shadow-md transition-all text-center group"
+              >
+                <FaBuilding className="text-2xl text-primary-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <span className="font-semibold text-gray-900 text-sm">Bureaux & locaux pro</span>
+              </Link>
+              <Link
+                href="/particuliers"
+                className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 hover:border-primary-400 hover:shadow-md transition-all text-center group"
+              >
+                <FaHome className="text-2xl text-primary-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <span className="font-semibold text-gray-900 text-sm">Ménage à domicile</span>
+              </Link>
+              <Link
+                href="/cheques-cesu"
+                className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 hover:border-primary-400 hover:shadow-md transition-all text-center group"
+              >
+                <FaPercent className="text-2xl text-primary-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <span className="font-semibold text-gray-900 text-sm">Chèques CESU</span>
+              </Link>
+              <Link
+                href="/services/coproprietes"
+                className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 hover:border-primary-400 hover:shadow-md transition-all text-center group"
+              >
+                <FaBuilding className="text-2xl text-primary-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <span className="font-semibold text-gray-900 text-sm">Copropriétés</span>
+              </Link>
+              <Link
+                href="/services/apres-travaux"
+                className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 hover:border-primary-400 hover:shadow-md transition-all text-center group"
+              >
+                <FaTools className="text-2xl text-primary-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <span className="font-semibold text-gray-900 text-sm">Après travaux</span>
+              </Link>
+              <Link
+                href="/services/debarras"
+                className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 hover:border-primary-400 hover:shadow-md transition-all text-center group"
+              >
+                <FaTruck className="text-2xl text-primary-600 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <span className="font-semibold text-gray-900 text-sm">Débarras</span>
+              </Link>
+            </div>
           </div>
 
           <div className="text-center">
@@ -206,8 +360,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pourquoi nous choisir */}
+      {/* Nos atouts (inspiré Servizen - 3 piliers) */}
       <section className="py-16 bg-white">
+        <div className="container-custom">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            Les atouts E & L PROPRETE
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gray-50 rounded-xl p-8 text-center border border-primary-100 hover:border-primary-300 transition-colors">
+              <div className="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FaMapMarkedAlt className="text-2xl text-primary-600" />
+              </div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">La proximité</h3>
+              <p className="text-gray-700">
+                E & L PROPRETE intervient sur Lyon et son agglomération. Proche de vous, nous sommes votre partenaire propreté du quotidien. Réactivité et connaissance du territoire garanties.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-8 text-center border border-primary-100 hover:border-primary-300 transition-colors">
+              <div className="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FaCheckCircle className="text-2xl text-primary-600" />
+              </div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">La qualité</h3>
+              <p className="text-gray-700">
+                Nous garantissons des prestations de qualité : personnel formé, matériel professionnel et protocoles d'hygiène respectés. Un suivi régulier assure la satisfaction de nos clients professionnels et particuliers.
+              </p>
+            </div>
+            <div className="bg-gray-50 rounded-xl p-8 text-center border border-primary-100 hover:border-primary-300 transition-colors">
+              <div className="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <FaUserTie className="text-2xl text-primary-600" />
+              </div>
+              <h3 className="font-bold text-xl text-gray-900 mb-3">L'humain</h3>
+              <p className="text-gray-700">
+                Un interlocuteur dédié, à l'écoute de vos besoins. Nous adaptons nos prestations à vos contraintes et restons disponibles pour toute question. Confiance et relation de proximité au cœur de notre métier.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pourquoi nous choisir */}
+      <section className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
@@ -222,7 +414,7 @@ export default function HomePage() {
                     Une société locale de confiance
                   </h3>
                   <p className="text-gray-700">
-                    Basée à Saint-Priest, nous connaissons parfaitement les
+                    Présents sur Lyon et son agglomération, nous connaissons parfaitement les
                     besoins du territoire. Proximité, disponibilité et
                     réactivité sont nos maîtres-mots pour vous garantir un
                     service de qualité.
@@ -283,14 +475,13 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Notre zone d'intervention dans le Rhône
+              Notre zone d'intervention : Lyon et son agglomération
             </h2>
             <p className="text-lg text-gray-700 mb-8">
-              E & L PROPRETE intervient principalement à{' '}
-              <strong>Saint-Priest</strong> et dans l'ensemble du{' '}
-              <strong>Lyon Est</strong>. Nous sommes également présents dans les
-              communes environnantes pour tous vos besoins en nettoyage
-              professionnel et ménage à domicile.
+              E & L PROPRETE intervient sur <strong>Lyon et son agglomération</strong>,{' '}
+              dans la <strong>métropole de Lyon</strong> et le Rhône. Nous couvrons
+              les communes de l'agglomération lyonnaise pour tous vos besoins en
+              nettoyage professionnel et ménage à domicile.
             </p>
 
             <div className="bg-white rounded-lg shadow-md p-8">
@@ -324,12 +515,12 @@ export default function HomePage() {
           {/* Titre principal */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Votre entreprise de nettoyage au cœur de la région lyonnaise
+              Votre entreprise de nettoyage au cœur de Lyon et son agglomération
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              Basés à Saint-Priest, nous connaissons parfaitement le tissu économique
-              et les spécificités de la métropole de Lyon et de ses communes
-              environnantes
+              Nous intervenons sur Lyon et son agglomération et connaissons
+              parfaitement le tissu économique et les spécificités de la
+              métropole de Lyon et de ses communes.
             </p>
           </div>
 
@@ -342,27 +533,24 @@ export default function HomePage() {
                 fill
                 className="object-cover"
               />
-              {/* TODO: Remplacer par une vraie photo de la région lyonnaise, de Lyon ou de Saint-Priest */}
+              {/* TODO: Remplacer par une vraie photo de Lyon ou de l'agglomération lyonnaise */}
             </div>
 
             <div className="space-y-6">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Une implantation stratégique à Saint-Priest
+                Une implantation au cœur de l'agglomération lyonnaise
               </h3>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Située au <strong>13 chemin du Charbonnier à Saint-Priest</strong>,
-                notre entreprise bénéficie d'un emplacement idéal pour desservir
-                rapidement l'ensemble de la <strong>région lyonnaise</strong>.
-                Saint-Priest, commune dynamique de plus de 42 000 habitants, se
-                trouve à la croisée des axes majeurs reliant Lyon à la région
-                Rhône-Alpes.
+                Notre siège est au <strong>13 chemin du Charbonnier à Saint-Priest</strong>.
+                Nous desservons <strong>Lyon et son agglomération</strong> : la
+                métropole de Lyon et ses communes (Saint-Priest, Bron, Vénissieux,
+                Villeurbanne, Vaulx-en-Velin, Meyzieu, Décines-Charpieu, etc.).
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Cette position stratégique nous permet d'intervenir en moins de{' '}
-                <strong>30 minutes</strong> dans la plupart des communes du{' '}
-                <strong>Grand Lyon</strong>, notamment dans tout le secteur Est :
-                Bron, Vénissieux, Vaulx-en-Velin, Meyzieu, Décines-Charpieu, mais
-                aussi les arrondissements lyonnais du 3ème, 7ème et 8ème.
+                Cette implantation nous permet d'intervenir en moins de{' '}
+                <strong>30 minutes</strong> dans la plupart des communes de la{' '}
+                <strong>métropole de Lyon</strong>, ainsi que dans les
+                arrondissements lyonnais et les communes environnantes.
               </p>
               <div className="bg-primary-50 border-l-4 border-primary-600 p-4 rounded">
                 <p className="text-gray-800 font-semibold">
@@ -373,10 +561,10 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Lyon Est : un secteur dynamique */}
+          {/* Lyon et son agglomération */}
           <div className="mb-20">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 text-center">
-              Lyon Est : un territoire en plein essor
+              Lyon et son agglomération : un territoire en plein essor
             </h3>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -388,7 +576,7 @@ export default function HomePage() {
                   habitants dans notre zone principale
                 </p>
                 <p className="text-gray-600 text-sm">
-                  Saint-Priest, Bron, Vénissieux, Mions représentent un bassin de
+                  Lyon et son agglomération représentent un bassin de
                   vie important
                 </p>
               </div>
@@ -401,7 +589,7 @@ export default function HomePage() {
                   entreprises dans le secteur
                 </p>
                 <p className="text-gray-600 text-sm">
-                  Zones d'activités de Chassieu, Meyzieu, Saint-Priest : tissu
+                  Zones d'activités de Chassieu, Meyzieu, Saint-Priest, Lyon : tissu
                   économique dense
                 </p>
               </div>
@@ -421,12 +609,12 @@ export default function HomePage() {
 
             <div className="bg-gray-50 rounded-xl p-8">
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Le <strong>secteur Lyon Est</strong> connaît un développement
+                L'<strong>agglomération lyonnaise</strong> connaît un développement
                 économique soutenu depuis plusieurs années. Entre les{' '}
                 <strong>zones d'activités de Chassieu</strong> (Montélier, Château
                 Sec), le <strong>pôle multimodal de Meyzieu</strong>, le{' '}
                 <strong>parc d'activités de Genas</strong> et les nombreux
-                commerces et bureaux implantés à Saint-Priest et Bron, le besoin en{' '}
+                commerces et bureaux implantés à Lyon et dans l'agglomération, le besoin en{' '}
                 <strong>services de nettoyage professionnel</strong> ne cesse de
                 croître.
               </p>
@@ -449,7 +637,7 @@ export default function HomePage() {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Les <strong>entreprises de la région lyonnaise</strong> nous font
                   confiance pour l'entretien quotidien de leurs espaces de travail.
-                  Que vous soyez une TPE à Saint-Priest, une PME dans une zone
+                  Que vous soyez une TPE à Lyon, une PME dans une zone
                   d'activités de Chassieu ou un grand groupe implanté à Lyon, nous
                   adaptons nos prestations à la taille et aux contraintes de votre
                   structure.
@@ -478,7 +666,7 @@ export default function HomePage() {
               <div className="relative h-80 rounded-xl overflow-hidden shadow-xl order-1 lg:order-2">
                 <Image
                   src="/bureau-propre.png"
-                  alt="Nettoyage de bureaux Lyon Est"
+                  alt="Nettoyage de bureaux Lyon et agglomération"
                   fill
                   className="object-cover"
                 />
@@ -498,11 +686,11 @@ export default function HomePage() {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Entretien de copropriétés à Saint-Priest et alentours
+                  Entretien de copropriétés à Lyon et son agglomération
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  Les <strong>syndics de copropriétés</strong> de Saint-Priest,
-                  Bron, Vénissieux, Mions et des communes environnantes nous
+                  Les <strong>syndics de copropriétés</strong> de Lyon et de
+                  l'agglomération (Saint-Priest, Bron, Vénissieux, Mions, etc.) nous
                   confient l'entretien régulier de leurs résidences. Nous
                   intervenons pour le nettoyage des parties communes, la vitrerie,
                   l'entretien des espaces extérieurs et le lavage des containers.
@@ -510,8 +698,8 @@ export default function HomePage() {
                 <p className="text-gray-700 leading-relaxed">
                   Nos équipes connaissent parfaitement les spécificités du parc
                   immobilier de la <strong>région lyonnaise</strong>, des
-                  copropriétés récentes du secteur Mi-Plaine à Saint-Priest aux
-                  immeubles plus anciens de Bron ou Vénissieux.
+                  copropriétés de la métropole de Lyon, des secteurs Est aux
+                  arrondissements lyonnais.
                 </p>
               </div>
             </div>
@@ -525,9 +713,9 @@ export default function HomePage() {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Les <strong>particuliers de la région lyonnaise</strong> font
                   appel à nos services pour l'entretien régulier de leur maison ou
-                  appartement. Que vous habitiez dans le centre de Saint-Priest,
-                  dans un lotissement à Mions, ou dans un quartier résidentiel de
-                  Bron, nous nous déplaçons chez vous.
+                  appartement. Que vous habitiez à Lyon ou dans l'agglomération
+                  (Saint-Priest, Mions, Bron, Vénissieux, etc.), nous nous
+                  déplaçons chez vous.
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   Paiement par <strong>chèques CESU</strong> accepté, vous
@@ -544,7 +732,7 @@ export default function HomePage() {
               <div className="relative h-80 rounded-xl overflow-hidden shadow-xl order-1 lg:order-2">
                 <Image
                   src="/menage-domicile.png"
-                  alt="Ménage à domicile Saint-Priest"
+                  alt="Ménage à domicile Lyon et agglomération"
                   fill
                   className="object-cover"
                 />
@@ -558,8 +746,8 @@ export default function HomePage() {
               Une entreprise locale au service de la région lyonnaise
             </h3>
             <p className="text-xl text-primary-50 mb-8 max-w-3xl mx-auto">
-              Faites confiance à une entreprise implantée à Saint-Priest qui
-              connaît votre territoire et ses spécificités. Devis gratuit et
+              Faites confiance à une entreprise qui intervient sur Lyon et son
+              agglomération et connaît votre territoire. Devis gratuit et
               personnalisé en 24h.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -579,7 +767,7 @@ export default function HomePage() {
               <div className="relative h-96 rounded-xl overflow-hidden shadow-2xl">
                 <Image
                   src="/equipe-nettoyage.png"
-                  alt="Équipe E & L PROPRETE Saint-Priest"
+                  alt="Équipe E & L PROPRETE Lyon et agglomération"
                   fill
                   className="object-cover"
                 />
@@ -590,14 +778,14 @@ export default function HomePage() {
                   Une équipe locale et expérimentée
                 </h3>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  Notre équipe, basée à <strong>Saint-Priest</strong>, connaît
-                  parfaitement la <strong>région lyonnaise</strong> et ses
+                  Notre équipe intervient sur <strong>Lyon et son agglomération</strong>{' '}
+                  et connaît parfaitement la métropole lyonnaise et ses
                   particularités. Nos intervenants sont tous formés aux techniques
                   de nettoyage professionnel et aux normes d'hygiène en vigueur.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  Que vous soyez à Saint-Priest, Bron, Vénissieux, Mions, Chassieu,
-                  Meyzieu ou dans les arrondissements lyonnais de l'Est, vous
+                  Que vous soyez à Lyon, Saint-Priest, Bron, Vénissieux, Mions, Chassieu,
+                  Meyzieu ou ailleurs dans l'agglomération, vous
                   bénéficiez du même niveau d'exigence et de la même réactivité.
                 </p>
                 <div className="bg-success-50 border border-success-200 rounded-lg p-6">
@@ -614,7 +802,7 @@ export default function HomePage() {
                     <li className="flex items-start space-x-2">
                       <span className="text-success-600 font-bold">✓</span>
                       <span>
-                        Temps de déplacement optimisés sur tout le Lyon Est
+                        Temps de déplacement optimisés sur toute l'agglomération lyonnaise
                       </span>
                     </li>
                     <li className="flex items-start space-x-2">
@@ -643,15 +831,15 @@ export default function HomePage() {
               Ils nous font confiance
             </h2>
             <p className="text-lg text-gray-600">
-              Découvrez les retours de nos clients satisfaits à Saint-Priest et
-              dans le Rhône
+              Découvrez les retours de nos clients satisfaits à Lyon et dans
+              l'agglomération
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <TestimonialCard
               name="Sophie Martin"
-              role="Gérante d'un cabinet médical à Saint-Priest"
+              role="Gérante d'un cabinet médical dans la métropole de Lyon"
               rating={5}
               text="E & L PROPRETE assure le nettoyage de notre cabinet depuis 6 mois. Le travail est impeccable et l'équipe très professionnelle. Les protocoles d'hygiène sont parfaitement respectés, ce qui est essentiel dans notre secteur."
             />
@@ -665,7 +853,7 @@ export default function HomePage() {
 
             <TestimonialCard
               name="Jean-Pierre Durand"
-              role="Particulier à Saint-Priest"
+              role="Particulier à Lyon et agglomération"
               rating={5}
               text="J'utilise leurs services de ménage à domicile depuis 1 an avec paiement en CESU. Le personnel est ponctuel, soigneux et discret. Je recommande vivement cette entreprise locale."
             />
@@ -682,8 +870,7 @@ export default function HomePage() {
                 Demandez votre devis gratuit
               </h2>
               <p className="text-lg text-gray-600">
-                Vous êtes professionnel ou particulier à Saint-Priest ou dans le
-                Lyon Est ? Contactez-nous pour un devis personnalisé et sans
+                Vous êtes professionnel ou particulier à Lyon ou dans son agglomération ? Contactez-nous pour un devis personnalisé et sans
                 engagement. Réponse rapide garantie.
               </p>
             </div>
@@ -750,7 +937,7 @@ export default function HomePage() {
                   </h4>
                   <p className="text-gray-700">
                     Besoin urgent ? Nous intervenons sous 24 à 48h pour toute
-                    demande de nettoyage à Saint-Priest et Lyon Est.
+                    demande de nettoyage à Lyon et son agglomération.
                   </p>
                 </div>
               </div>

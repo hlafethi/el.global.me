@@ -12,8 +12,8 @@ export default function ServiceCard({
   description,
 }: ServiceCardProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100">
-      <div className="flex items-center justify-center w-16 h-16 bg-primary-100 text-primary-600 rounded-full mb-4 mx-auto">
+    <div className="bg-white rounded-xl shadow-md hover:shadow-xl hover:shadow-primary-glow transition-all duration-300 p-6 border-2 border-gray-100 hover:border-primary-200 hover:-translate-y-1">
+      <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 text-primary-700 rounded-xl mb-4 mx-auto ring-2 ring-primary-100">
         <div className="text-3xl">{icon}</div>
       </div>
       <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">

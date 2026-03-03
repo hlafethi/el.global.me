@@ -11,9 +11,9 @@ import {
 } from 'react-icons/fa'
 
 export const metadata: Metadata = {
-  title: 'Chèques CESU pour le ménage à domicile | E & L PROPRETE Saint-Priest',
+  title: 'Chèques CESU pour le ménage à domicile | E & L PROPRETE Lyon',
   description:
-    'Comment utiliser vos chèques CESU pour payer vos prestations de ménage à domicile ? Explications détaillées, avantages fiscaux, mode d\'emploi. E & L PROPRETE accepte les CESU à Saint-Priest.',
+    'Comment utiliser vos chèques CESU pour payer vos prestations de ménage à domicile ? Explications détaillées, avantages fiscaux, mode d\'emploi. E & L PROPRETE accepte les CESU à Lyon et son agglomération.',
   openGraph: {
     title: 'Paiement CESU accepté - E & L PROPRETE',
     description:
@@ -91,7 +91,7 @@ export default function ChequesCesuPage() {
             <p className="text-lg text-gray-700 leading-relaxed">
               <strong>E & L PROPRETE</strong> accepte principalement les{' '}
               <strong>CESU préfinancés</strong> pour le règlement de vos
-              prestations de ménage à domicile à Saint-Priest et dans le Lyon Est.
+              prestations de ménage à domicile à Lyon et son agglomération.
               N'hésitez pas à nous contacter pour en savoir plus sur les modalités
               d'utilisation.
             </p>
@@ -236,7 +236,7 @@ export default function ChequesCesuPage() {
                   </h3>
                   <p className="text-gray-700 leading-relaxed">
                     Une fois le devis accepté, nous organisons les interventions de
-                    ménage chez vous à Saint-Priest ou dans le Lyon Est. Nos
+                    ménage chez vous à Lyon ou dans son agglomération. Nos
                     intervenants se rendent à votre domicile aux jours et heures
                     convenus pour réaliser les prestations prévues.
                   </p>
@@ -407,8 +407,7 @@ export default function ChequesCesuPage() {
                       à la personne : garde d'enfants, aide aux personnes âgées,
                       jardinage, petit bricolage, cours à domicile, etc. Chez E & L
                       PROPRETE, nous les acceptons pour toutes nos prestations de
-                      ménage et d'entretien à domicile à Saint-Priest et dans le
-                      Lyon Est.
+                      ménage et d'entretien à domicile à Lyon et son agglomération.
                     </p>
                   </div>
                 </div>
@@ -479,8 +478,7 @@ export default function ChequesCesuPage() {
             </h2>
             <p className="text-lg text-gray-700 mb-8">
               Contactez E & L PROPRETE dès maintenant pour un devis personnalisé.
-              Nous acceptons les chèques CESU à Saint-Priest et dans tout le Lyon
-              Est.
+              Nous acceptons les chèques CESU à Lyon et dans toute l'agglomération.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
